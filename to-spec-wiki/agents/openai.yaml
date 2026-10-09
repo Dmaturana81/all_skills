@@ -1,0 +1,5 @@
+interface:
+  display_name: "To Spec (Wiki)"
+  short_description: "Collapse a cleared wayfinding map into a wiki spec"
+policy:
+  allow_implicit_invocation: false

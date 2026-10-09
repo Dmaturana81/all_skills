@@ -1,0 +1,43 @@
+{
+  "skill_name": "repo-agent-wiki",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I have a FastAPI + Celery + Postgres repo at ~/work/order-bot. Docs are only a 400-line README. Create an agent wiki like wiki_mjauto — scaffold first, English, folder wiki_orderbot, add to gitignore, draft cursor rule but don't install.",
+      "expected_output": "Full wiki_orderbot/ tree with L0-L4 stubs, 5-8 domains (api, workers, database, infra, etc.), meta/, frontmatter on all files, .gitignore updated, DRAFT_CURSOR_RULE.md present",
+      "files": [],
+      "expectations": [
+        "wiki_orderbot/00_BOOT.md exists with layer L0 frontmatter",
+        "wiki_orderbot/domains/ contains at least 4 domain markdown files",
+        "wiki_orderbot/meta/AGENT_PROTOCOL.md defines max 2 domains per session",
+        "wiki_orderbot/reference/file-map.md exists with no long prose paragraphs",
+        "wiki_orderbot is added to .gitignore when user requested gitignore"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "We already have wiki_payments/ scaffolded in this monorepo. Fill it using the standard fill order — start with reference tables from docker-compose and the payments-api router, then expand the domains.",
+      "expected_output": "L4 reference pages populated from code sources; domains updated with links to reference; CHANGELOG entry added; topics/README status updated",
+      "files": [],
+      "expectations": [
+        "reference/env-vars.md or reference/api-endpoints.md contains values traced to repo files not invented names",
+        "domains/*.md link to reference/ pages instead of duplicating full endpoint tables",
+        "meta/CHANGELOG.md has a dated entry for the fill pass",
+        "L4 pages use tables as primary content not essay paragraphs"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Add a new microservice notification-svc to our existing wiki_platform. Update the wiki scaffold and MAP router — don't rewrite the whole wiki.",
+      "expected_output": "New domains/notifications.md (or similar), 01_MAP router row, topics/README if needed, CHANGELOG entry, minimal edits to 00_BOOT component table",
+      "files": [],
+      "expectations": [
+        "01_MAP.md domain router includes the new service domain",
+        "New domain file has YAML frontmatter with layer L2 and code_paths",
+        "00_BOOT.md component list mentions notification service",
+        "meta/CHANGELOG.md documents the addition",
+        "Existing filled topics were not deleted or emptied"
+      ]
+    }
+  ]
+}

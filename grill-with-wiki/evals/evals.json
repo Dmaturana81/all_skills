@@ -1,0 +1,41 @@
+{
+  "skill_name": "grill-with-wiki",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I want to add partial line-item cancellation to TestShop — customers should cancel one item from a multi-item order without cancelling the whole thing. Grill me on this plan. The wiki fixture is at skills/engineering/grill-with-wiki/evals/fixtures/wiki_testshop/.",
+      "expected_output": "Agent reads wiki bootstrap (00_BOOT, 01_MAP, ordering domain), challenges against existing Cancellation definition and decision 0001, asks one question at a time with a recommended answer, does not approve partial cancel without resolving the conflict",
+      "files": ["evals/fixtures/wiki_testshop"],
+      "expectations": [
+        "Response references existing wiki language for Cancellation (full order / entire order) or cites decision 0001",
+        "Response asks exactly one grilling question (not a numbered list of many questions)",
+        "Response includes a recommended answer or stance for the question asked",
+        "Response does not treat partial cancellation as already supported without noting wiki/code conflict"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Planning to replace synchronous HTTP calls between ordering and billing with domain events over RabbitMQ. Stress-test this against our wiki at skills/engineering/grill-with-wiki/evals/fixtures/wiki_testshop/. Grill me.",
+      "expected_output": "Agent routes through 01_MAP to ordering + billing domains (max 2), asks one integration-focused question, offers or frames a decision record when trade-off is load-bearing",
+      "files": ["evals/fixtures/wiki_testshop"],
+      "expectations": [
+        "Response mentions both ordering and billing bounded contexts or their wiki domains",
+        "Response asks one question at a time (single primary question, not a questionnaire)",
+        "Response surfaces a trade-off (sync HTTP vs events) or references current ShipmentDispatched integration pattern from wiki",
+        "Response offers or mentions recording a decision in topics/decisions/ when the trade-off is hard to reverse"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "We need to let each account see their order history. Use grill-with-wiki — the project wiki is at skills/engineering/grill-with-wiki/evals/fixtures/wiki_testshop/.",
+      "expected_output": "Agent sharpens vague 'account' to Customer (or asks which term), reads glossary/domain Language, one question with recommendation",
+      "files": ["evals/fixtures/wiki_testshop"],
+      "expectations": [
+        "Response challenges or clarifies the term account against wiki glossary (Customer vs User or similar)",
+        "Response reads from or cites wiki domain language or reference/glossary.md",
+        "Response asks one primary grilling question with a recommended answer",
+        "Response does not use account as canonical term without reconciling with wiki vocabulary"
+      ]
+    }
+  ]
+}

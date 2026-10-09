@@ -1,0 +1,5 @@
+interface:
+  display_name: "Wayfinder (Wiki)"
+  short_description: "Map a large effort as decision tickets inside wiki_*/"
+policy:
+  allow_implicit_invocation: false

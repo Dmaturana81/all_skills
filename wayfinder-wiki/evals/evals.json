@@ -1,0 +1,44 @@
+{
+  "skill_name": "wayfinder-wiki",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "/wayfinder-wiki work the partial-cancellation map. The wiki is at wayfinder-wiki/evals/fixtures/wiki_testshop/. I'm matu.",
+      "expected_output": "Agent loads MAP.md and the generated tickets/README.md (not every ticket body), runs the check, picks the only frontier ticket 'What a line cancellation is', claims it for matu before any other work, loads at most the ordering and fulfillment domains, then grills in ticket mode: challenges against the existing Cancellation term and decision 0001 and uses the closed research ticket's finding. It asks questions with recommended answers and waits; it does not answer for the user, does not touch the blocked prototype ticket, and does not close the ticket yet.",
+      "files": ["evals/fixtures/wiki_testshop"],
+      "expectations": [
+        "Response chooses the ticket 'What a line cancellation is' and refers to it by name, not only by number",
+        "The ticket file's assignee is set to matu (claim happens before grilling)",
+        "Response cites the ordering Language definition of Cancellation or decision 0001 as a conflict to resolve",
+        "Response uses the research finding that stock is reserved per Order",
+        "Response asks numbered questions, each with a recommended answer, and waits for the user",
+        "The prototype ticket 'Line cancellation state model' is neither claimed nor resolved",
+        "MAP.md Decisions so far is unchanged (the grilling ticket is not yet resolved)"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "/wayfinder-wiki I want to rethink refunds end to end: partial refunds, refunds after partial shipment, and how billing learns about them. It's big and I don't know where to start. Wiki: wayfinder-wiki/evals/fixtures/wiki_testshop/.",
+      "expected_output": "Agent routes through the wiki, reads meta/INDEX.md and meta/wayfinding/INDEX.md, notices the existing partial-cancellation map lists refunds as Not yet specified fog, and raises the overlap before charting. It starts by naming the destination through grilling (ticket mode with domain modeling), challenging 'refund' against the billing and ordering Language. It does not create tickets before the destination is settled.",
+      "files": ["evals/fixtures/wiki_testshop"],
+      "expectations": [
+        "Response mentions the existing 'Partial line-item cancellation' map and its refunds fog as overlapping scope",
+        "Response asks the user to settle the destination first (what this map is finding its way to)",
+        "Response challenges or sharpens the term refund against wiki Language (Cancellation, Invoice) or the glossary",
+        "No new ticket files are created in this first response",
+        "Response offers a recommended answer for each question it asks"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "/wayfinder-wiki rename the GET /orders/:id response field `lines` to `order_lines`. Wiki: wayfinder-wiki/evals/fixtures/wiki_testshop/.",
+      "expected_output": "Agent recognises there is no fog (the way is clear and fits one session) and stops without creating a map, suggesting /grill-with-wiki or going straight to implementation.",
+      "files": ["evals/fixtures/wiki_testshop"],
+      "expectations": [
+        "No directory is created under meta/wayfinding/ for this request",
+        "Response says a map is not needed because the work fits one session",
+        "Response suggests a lighter path such as /grill-with-wiki, /to-spec-wiki, or /implement-wiki and asks how to proceed"
+      ]
+    }
+  ]
+}

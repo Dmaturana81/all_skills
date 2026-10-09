@@ -57,6 +57,7 @@ This is just the same in the AI age. There is a communication gap between you an
 
 - [`/grill-me`](./skills/productivity/grill-me/SKILL.md) - for non-code uses
 - [`/grill-with-docs`](./skills/engineering/grill-with-docs/SKILL.md) - same as [`/grill-me`](./skills/productivity/grill-me/SKILL.md), but adds more goodies (see below)
+- [`/grill-with-wiki`](./skills/engineering/grill-with-wiki/SKILL.md) - same grilling workflow, but uses a `wiki_*/` agent wiki (from **repo-agent-wiki**) as the knowledge graph instead of `CONTEXT.md`
 
 These are my most popular skills. They help you align with the agent before you get started, and think deeply about the change you're making. Use them _every_ time you want to make a change.
 
@@ -148,6 +149,11 @@ Skills I use daily for code work.
 
 - **[diagnose](./skills/engineering/diagnose/SKILL.md)** — Disciplined diagnosis loop for hard bugs and performance regressions: reproduce → minimise → hypothesise → instrument → fix → regression-test.
 - **[grill-with-docs](./skills/engineering/grill-with-docs/SKILL.md)** — Grilling session that challenges your plan against the existing domain model, sharpens terminology, and updates `CONTEXT.md` and ADRs inline.
+- **[grill-with-wiki](./skills/engineering/grill-with-wiki/SKILL.md)** — Grilling session against the repo's layered agent wiki; sharpens domain language and records hard decisions in `topics/decisions/`.
+- **[wayfinder-wiki](./skills/engineering/wayfinder-wiki/SKILL.md)** — Plan a huge, foggy effort as a map of decision tickets inside the agent wiki (`meta/wayfinding/`), resolving one per session and writing each answer to its canonical wiki page.
+- **[research-wiki](./skills/engineering/research-wiki/SKILL.md)** — Research against primary sources in a background agent; findings are cited, indexed in `meta/research/`, and promoted to L4 when durable.
+- **[prototype-wiki](./skills/engineering/prototype-wiki/SKILL.md)** — Throwaway prototype on its own branch, with the question and verdict recorded in `meta/prototypes/`.
+- **[to-spec-wiki](./skills/engineering/to-spec-wiki/SKILL.md)** — Collapse a cleared wayfinding map (or the conversation) into a spec in `meta/sdlc-artifacts/<effort>/`, linked to every decision it rests on.
 - **[triage](./skills/engineering/triage/SKILL.md)** — Triage issues through a state machine of triage roles.
 - **[improve-codebase-architecture](./skills/engineering/improve-codebase-architecture/SKILL.md)** — Find deepening opportunities in a codebase, informed by the domain language in `CONTEXT.md` and the decisions in `docs/adr/`.
 - **[setup-matt-pocock-skills](./skills/engineering/setup-matt-pocock-skills/SKILL.md)** — Scaffold the per-repo config (issue tracker, triage label vocabulary, domain doc layout) that the other engineering skills consume. Run once per repo before using `to-issues`, `to-prd`, `triage`, `diagnose`, `tdd`, `improve-codebase-architecture`, or `zoom-out`.

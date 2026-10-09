@@ -1,0 +1,3 @@
+interface:
+  display_name: "TDD (Wiki)"
+  short_description: "Red-green-refactor against wiki_*/ language and SDLC artifacts"
