@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Resolve this file even when invoked via a PATH symlink.
+set -euo pipefail
+source="${BASH_SOURCE[0]}"
+while [[ -L "$source" ]]; do
+  dir="$(cd "$(dirname "$source")" && pwd)"
+  source="$(readlink "$source")"
+  [[ "$source" != /* ]] && source="$dir/$source"
+done
+script_dir="$(cd "$(dirname "$source")" && pwd)"
+exec python3 "$script_dir/link_skill_group.py" "$@"

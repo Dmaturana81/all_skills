@@ -1,0 +1,5 @@
+.cursor/
+.DS_Store
+__pycache__/
+*.pyc
+wayfinder-wiki-workspace/
