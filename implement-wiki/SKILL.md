@@ -2,8 +2,8 @@
 name: implement-wiki
 description: >-
   Implement a piece of work from a spec or tickets in a wiki_*/ repo, then
-  bring the wiki up to date with what changed. Use when /implement is needed
-  and the project uses a layered agent wiki — prefers /tdd-wiki over /tdd.
+  bring the wiki up to date with what changed. Use when the user wants to
+  implement a spec or tickets and the project uses a layered agent wiki.
 disable-model-invocation: true
 ---
 

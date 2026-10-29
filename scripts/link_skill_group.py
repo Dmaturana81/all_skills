@@ -11,6 +11,7 @@ scripts/skill-groups.md.
   link-skills productivity trello
   link-skills productivity to-questionnaire
   link-skills tdd code-review graphify
+  link-skills formater
   link-skills --file .skill-groups
   link-skills grill-wiki spec-ship --write-file .skill-groups
   link-skills --list
@@ -453,6 +454,7 @@ def list_groups(index: dict[str, list[Path]]) -> None:
     print("  link-skills productivity trello")
     print("  link-skills productivity to-questionnaire")
     print("  link-skills tdd graphify")
+    print("  link-skills formater")
     print("  link-skills linkedin geo --write-file .skill-groups")
     print("  link-skills --file .skill-groups")
     print("  Groups: scripts/skill-groups.md")

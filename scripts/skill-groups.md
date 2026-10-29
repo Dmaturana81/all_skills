@@ -238,6 +238,8 @@ They do **not** call each other. Writer path in catalog (`~/.cursor/skills/linke
 
 Integrations you rarely need as a pack: `apple-notes`, `apple-reminders`, `bluebubbles`, `discord`, `slack`, `slack-gif-creator`, `gog`, `goplaces`, `gifgrep`, `video-frames`, `wacli`. Link individually: `link-skills trello` or `link-skills graphify`.
 
+`formater` turns a Markdown relatório into a Word template (with or without cover). Link it alone: `link-skills formater`.
+
 Duplicate: `web-artifacts-builder` exists at `all_skills/` root and `all_skills/web/`. Linker prefers `web/` when `geo` or `frontend` is selected.
 
 ---

@@ -6,8 +6,8 @@ description: >-
   decisions crystallise. Use whenever the user wants to grill, stress-test, or
   align on a design AND the project has (or should have) a repo-agent-wiki —
   even if they say "grill me", "challenge my plan", or "does this fit our
-  architecture" without naming the wiki. Prefer this over grill-with-docs when
-  wiki_*/ exists. Do NOT use for repos with only CONTEXT.md and no wiki.
+  architecture" without naming the wiki. Do NOT use for repos with only
+  CONTEXT.md and no wiki.
 disable-model-invocation: true
 ---
 

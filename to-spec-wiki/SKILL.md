@@ -21,13 +21,13 @@ Synthesize what is already decided into a spec. Do NOT interview the user; if so
 2. Read every closed ticket's `## Resolution`, and follow its `Wiki updates` links to the decisions, Language entries, L4 rows, research notes, and prototype records.
 3. Read the domains the map's Notes name (at most 2 at a time).
 
-**From the conversation**: when there is no map, use what was discussed, exactly as `/to-spec` does.
+**From the conversation**: when there is no map, synthesize what was already discussed — do not interview.
 
 ## Writing the spec
 
 1. Explore the code the spec touches via domain `code_paths`. Use the wiki's `## Language` terms throughout, and respect every `topics/decisions/` record in the area.
 2. Sketch the test seams. Prefer existing seams and the highest seam possible; ideally one. **Check them with the user**: this is the only question you ask.
-3. Write `wiki_<name>/meta/sdlc-artifacts/<effort>/spec.md` using the `/to-spec` template (problem, solution, user stories, implementation decisions, testing decisions, out of scope, further notes), with frontmatter:
+3. Write `wiki_<name>/meta/sdlc-artifacts/<effort>/spec.md` using [references/SPEC-TEMPLATE.md](references/SPEC-TEMPLATE.md) (problem, solution, user stories, implementation decisions, testing decisions, out of scope, further notes), with frontmatter:
 
 ```yaml
 ---

@@ -10,7 +10,7 @@ description: >-
 
 # Research (Wiki)
 
-Spin up a **background agent** to do the research, so you keep working while it reads. Same discipline as `/research`; the difference is where the findings land and how they stay findable.
+Spin up a **background agent** to do the research, so you keep working while it reads. Investigate against primary sources (official docs, source code, specs, first-party APIs), cite every claim, and write one Markdown note. The wiki is where that note lives and stays findable.
 
 ## Its job
 
@@ -78,4 +78,4 @@ parent: ../INDEX.md
 | [Fulfillment allocation](fulfillment-allocation.md) | Can stock be reserved per line? | 2026-10-09 | [Allocation granularity](../wayfinding/partial-cancellation/tickets/0002-allocation-granularity.md) |
 ```
 
-If no wiki exists, fall back to `/research`.
+If no wiki exists, stop and tell the user to run **repo-agent-wiki** first. If they insist on proceeding without a wiki, write the same cited note where the repo already keeps research (match the existing convention; if there is none, pick a sensible path and say where). Do not invent a second research skill.
